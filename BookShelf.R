@@ -1,7 +1,7 @@
 
 # My first R program
 print("Welcome to BookShelf!")
-books <- read.csv("books.csv",na.strings=c())
+books <- read.csv("books.csv",na.strings=c("","NA"))
 print(books)
 #check for missing authors
 #is.na(books$author)
