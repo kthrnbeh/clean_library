@@ -11,5 +11,5 @@ check_missing <- function(column) {
   return(missing_values)
 }
 # counting the missing authors.
-sum(missing_values)
-print(missing_values)
+missing_authors<-sum(check_missing(books$authors))
+print(missing_authors)
