@@ -18,3 +18,4 @@ for (column_name in names (books)){
   missing_count <- sum(check_missing(books[[column_name]]), na.rm=TRUE)  
   cat("Missing", column_name, ":", missing_count, "\n")
 }
+# Find duplicate books
