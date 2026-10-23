@@ -13,3 +13,7 @@ check_missing <- function(column) {
 # counting the missing authors.
 missing_author<-sum(check_missing(books$author))
 print(missing_author)
+#Checking all categories for errors
+for(column_name in names(books)){
+    
+}
