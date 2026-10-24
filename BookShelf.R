@@ -18,12 +18,15 @@ for (column_name in names (books)){
   missing_count <- sum(check_missing(books[[column_name]]), na.rm = TRUE)  
   cat("Missing", column_name, ":", missing_count, "\n")
 }
-# Find duplicate books
- duplicate_books <- duplicated(books [c("title","author")])
- duplicate_count <- sum(duplicate_books)
- cat("Duplicate Books",column_name,":",duplicate_count,"\n")
+
  # Create a copy of the original library
  cleaned_books <- books
  # Standardize book titles
 cleaned_books$title <- tools::toTitleCase(trimws(cleaned_books$title))
 print(cleaned_books)
+# Remove extra spaces from author names
+cleaned_books$author <- trimws(cleaned_books$author)
+# Find duplicate books
+ duplicate_books <- duplicated(books [c("title","author")])
+ duplicate_count <- sum(duplicate_books)
+ cat("Duplicate Books", duplicate_count,"\n")
