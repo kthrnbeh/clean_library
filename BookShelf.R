@@ -24,3 +24,5 @@ for (column_name in names (books)){
  cat("Duplicate Books",column_name,":",duplicate_count,"\n")
  # Create a copy of the original library
  cleaned_books <- books
+ # Standardize book titles
+cleaned_books$title <- tools::toTitleCase(trimws(books))
