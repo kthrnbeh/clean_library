@@ -25,5 +25,5 @@ for (column_name in names (books)){
  # Create a copy of the original library
  cleaned_books <- books
  # Standardize book titles
-cleaned_books$title <- tools::toTitleCase(trimws(title))
+cleaned_books$title <- tools::toTitleCase(trimws(cleaned_books$title))
 print(cleaned_books)
