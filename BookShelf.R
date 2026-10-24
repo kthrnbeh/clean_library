@@ -19,6 +19,6 @@ for (column_name in names (books)){
   cat("Missing", column_name, ":", missing_count, "\n")
 }
 # Find duplicate books
- duplicate_books <- duplicated([c("title","author")])
+ duplicate_books <- duplicated(books [c("title","author")])
  duplicate_count <- sum(duplicate_books)
  cat("Duplicate Books",column_name,":",duplicate_count,"\n")
