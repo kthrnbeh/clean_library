@@ -8,14 +8,14 @@ print(books)
 #print(is.na(books$author))
 check_missing <- function(column) {
   missing_values <- is.na(column) | trimws(column) == ""
-  return (missing_values)
+  return(missing_values)
 }
 # counting the missing authors.
 missing_author <- sum(check_missing(books$author))
 print(missing_author)
 #Checking all categories for errors
 for (column_name in names (books)){
-  missing_count <- sum(check_missing(books[[column_name]]), na.rm=TRUE)  
+  missing_count <- sum(check_missing(books[[column_name]]), na.rm = TRUE)  
   cat("Missing", column_name, ":", missing_count, "\n")
 }
 # Find duplicate books
