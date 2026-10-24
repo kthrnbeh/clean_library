@@ -23,6 +23,7 @@ for (column_name in names (books)){
  cleaned_books <- books
  # Standardize book titles
 cleaned_books$title <- tools::toTitleCase(trimws(cleaned_books$title))
+cleansgsub("  +"," ",cleaned_books$title)
 print(cleaned_books)
 # Remove extra spaces from author names
 cleaned_books$author <- trimws(cleaned_books$author)
@@ -30,3 +31,4 @@ cleaned_books$author <- trimws(cleaned_books$author)
  duplicate_books <- duplicated(cleaned_books [c("title","author")])
  duplicate_count <- sum(duplicate_books)
  cat("Duplicate Books", duplicate_count,"\n")
+ 
