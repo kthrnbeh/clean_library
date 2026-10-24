@@ -27,6 +27,7 @@ cleaned_books$titles <- gsub("  +"," ",cleaned_books$title)
 print(cleaned_books)
 # Remove extra spaces from author names
 cleaned_books$author <- trimws(cleaned_books$author)
+cleaned_books$author <- gsub("  +"," ",cleaned_books$author)
 # Find duplicate books
  duplicate_books <- duplicated(cleaned_books [c("title","author")])
  duplicate_count <- sum(duplicate_books)
