@@ -23,3 +23,4 @@ for (column_name in names (books)){
  duplicate_count <- sum(duplicate_books)
  cat("Duplicate Books",column_name,":",duplicate_count,"\n")
  # Create a copy of the original library
+ cleaned_books <- books
