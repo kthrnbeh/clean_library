@@ -39,3 +39,4 @@ cleaned_books$author_key <- tolower(cleaned_books$author)
  cleaned_books <- cleaned_books[!duplicate_books, ]
  cat("Books remaining:", nrow(cleaned_books), "\n")
  print(cleaned_books)
+ # Identify invalid page counts
