@@ -35,4 +35,4 @@ cleaned_books$author_key <- tolower(cleaned_books$author)
  duplicate_books <- duplicated(cleaned_books [c("title_key","author_key")])
  duplicate_count <- sum(duplicate_books)
  cat("Duplicate Books", duplicate_count,"\n")
- 
+ # Remove duplicate books
