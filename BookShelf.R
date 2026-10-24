@@ -23,7 +23,7 @@ for (column_name in names (books)){
  cleaned_books <- books
  # Standardize book titles
 cleaned_books$title <- tools::toTitleCase(trimws(cleaned_books$title))
-cleaned_books$titles <- gsub("  +"," ",cleaned_books$title)
+cleaned_books$title <- gsub("  +"," ",cleaned_books$title)
 cleaned_books$title_key <- tolower(cleaned_books$title)
 print(cleaned_books)
 # Remove extra spaces from author names
