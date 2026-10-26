@@ -1,48 +1,55 @@
 
 # My first R program
 print("Welcome to BookShelf!")
+#This loads my csv file, the empty cells will be read as NA
 books <- read.csv("books.csv", na.strings = c("", "NA"))
 print(books)
-#check for missing authors
-#is.na(books$author)
-#print(is.na(books$author))
+#I want to check for missing authors and count them
 check_missing <- function(column) {
   missing_values <- is.na(column) | trimws(column) == ""
   return(missing_values)
 }
-# counting the missing authors.
 missing_author <- sum(check_missing(books$author))
 print(missing_author)
-#Checking all categories for errors
+#The categories will be checked for missing info instead of each column
 for (column_name in names (books)){
   missing_count <- sum(check_missing(books[[column_name]]), na.rm = TRUE)  
   cat("Missing", column_name, ":", missing_count, "\n")
 }
 
- # Create a copy of the original library
+ # this is what the library I am making is all about
+ #a clean library that is in here without changing the original one. 
  cleaned_books <- books
  # Standardize book titles
 cleaned_books$title <- tools::toTitleCase(trimws(cleaned_books$title))
 cleaned_books$title <- gsub("  +"," ",cleaned_books$title)
 cleaned_books$title_key <- tolower(cleaned_books$title)
 
-#This section is about spaces, In a couple of my csv I made space, and now I made a code to remove that,
-#and then add them back. 
+#The codes about removing extra space, and moving it to a regular one
 cleaned_books$author <- trimws(cleaned_books$author)
 cleaned_books$author <- gsub("  +"," ",cleaned_books$author)
 
 cleaned_books$author_key <- tolower(cleaned_books$author)
+
+
 # This section finds the duplicate books counts them and deletes them from the main count
+#without changing the actual csv author file
  duplicate_books <- duplicated(cleaned_books [c("title_key","author_key")])
  duplicate_count <- sum(duplicate_books)
  cat("Duplicate Books", duplicate_count,"\n")
  cleaned_books <- cleaned_books[!duplicate_books, ]
  cat("Books remaining:", nrow(cleaned_books), "\n")
  print(cleaned_books)
+ 
  # This sections purpose is to find pages that are incorrect, or not fully a number
- #count it and replace it with NA
+ #count invalid pagesand replace it with NA
  invalid_pages <- cleaned_books$pages <= 0| cleaned_books$pages %% 1 != 0
  invalid_page_count <-sum(invalid_pages,na.rm = TRUE)
  cat("Invalid page amount:",invalid_page_count,"\n")
  cleaned_books$pages[which(invalid_pages)] <- NA
  # Identify invalid ratings
+ #we want to figure out if the ratings in my csv are correctly 
+ #written from 0-5
+ invaid_ratings <- cleaned_books$rating < 0 | cleaned_books$rating > 5
+ invalid_rating_count <- sum(invalid_rating, na.rm=TRUE)
+ cat("Invalid ratings:",invalid_rating_count,"\n")
