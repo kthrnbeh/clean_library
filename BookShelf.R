@@ -39,7 +39,7 @@ cleaned_books$author_key <- tolower(cleaned_books$author)
  cat("Duplicate Books", duplicate_count,"\n")
  cleaned_books <- cleaned_books[!duplicate_books, ]
  cat("Books remaining:", nrow(cleaned_books), "\n")
- print(cleaned_books)
+
  
  # This sections purpose is to find pages that are incorrect, or not fully a number
  #count invalid pagesand replace it with NA
@@ -50,6 +50,22 @@ cleaned_books$author_key <- tolower(cleaned_books$author)
  # Identify invalid ratings
  #we want to figure out if the ratings in my csv are correctly 
  #written from 0-5
- invaid_ratings <- cleaned_books$rating < 0 | cleaned_books$rating > 5
- invalid_rating_count <- sum(invalid_rating, na.rm=TRUE)
+ invalid_ratings <- cleaned_books$rating < 0 | cleaned_books$rating > 5
+ invalid_rating_count <- sum(invalid_ratings, na.rm=TRUE)
  cat("Invalid ratings:",invalid_rating_count,"\n")
+ #now were replacing the invalid ratings with NA
+ cleaned_books$rating[which(invalid_ratings)] <- NA
+
+ #We made two columns taht helped detect duplicates regardless of 
+ #if they were captilized these will remove that by using Null
+ cleaned_books$title_key <-NULL
+ cleaned_books$author_key <-NULL 
+
+
+
+
+ print(cleaned_books)
+ #The statistical report to tell us useful collection info.
+ cat('\n-- BookShelf Library Report---\n')
+ total_books <- nrow(cleaned_books)
+ average_rating <-mean(cleaned_books$rating,na.rm = TRUE)
