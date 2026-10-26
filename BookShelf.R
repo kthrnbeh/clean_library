@@ -26,16 +26,16 @@ cleaned_books$title <- tools::toTitleCase(trimws(cleaned_books$title))
 cleaned_books$title <- gsub("  +"," ",cleaned_books$title)
 cleaned_books$title_key <- tolower(cleaned_books$title)
 
-# Remove extra spaces from author names
+#This section is about spaces, In a couple of my csv I made space, and now I made a code to remove that,
+#and then add them back. 
 cleaned_books$author <- trimws(cleaned_books$author)
 cleaned_books$author <- gsub("  +"," ",cleaned_books$author)
 
 cleaned_books$author_key <- tolower(cleaned_books$author)
-# Find duplicate books
+# This section finds the duplicate books counts them and deletes them from the main count
  duplicate_books <- duplicated(cleaned_books [c("title_key","author_key")])
  duplicate_count <- sum(duplicate_books)
  cat("Duplicate Books", duplicate_count,"\n")
- # Remove duplicate books
  cleaned_books <- cleaned_books[!duplicate_books, ]
  cat("Books remaining:", nrow(cleaned_books), "\n")
  print(cleaned_books)
@@ -45,3 +45,4 @@ cleaned_books$author_key <- tolower(cleaned_books$author)
  invalid_page_count <-sum(invalid_pages,na.rm = TRUE)
  cat("Invalid page amount:",invalid_page_count,"\n")
  cleaned_books$pages[which(invalid_pages)] <- NA
+ # Identify invalid ratings
