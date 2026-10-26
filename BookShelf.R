@@ -44,3 +44,4 @@ cleaned_books$author_key <- tolower(cleaned_books$author)
  #for counting the total number of invalid pages instead of just one. 
  invalid_page_count <-sum(invalid_pages,na.rm = TRUE)
  cat("Invalid page amount:",invalid_page_count,"\n")
+ # Replace invalid page counts with missing values
