@@ -45,3 +45,5 @@ cleaned_books$author_key <- tolower(cleaned_books$author)
  invalid_page_count <-sum(invalid_pages,na.rm = TRUE)
  cat("Invalid page amount:",invalid_page_count,"\n")
  # Replace invalid page counts with missing values
+ #dataframe$column[condition] <- new_value
+ cleaned_books$pages[invalid_pages] <- NA
