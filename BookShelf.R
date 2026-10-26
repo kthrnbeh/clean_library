@@ -41,4 +41,6 @@ cleaned_books$author_key <- tolower(cleaned_books$author)
  print(cleaned_books)
  # Identify invalid page counts
  invalid_pages <- cleaned_books$pages <= 0
- cat("Invalid page amount:",invalid_pages,"\n")
+ #for counting the total number of invalid pages instead of just one. 
+ invalid_page_count <-sum(invalid_pages,na.rm = TRUE)
+ cat("Invalid page amount:",invalid_page_count,"\n")
