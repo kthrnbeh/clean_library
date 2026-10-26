@@ -39,11 +39,9 @@ cleaned_books$author_key <- tolower(cleaned_books$author)
  cleaned_books <- cleaned_books[!duplicate_books, ]
  cat("Books remaining:", nrow(cleaned_books), "\n")
  print(cleaned_books)
- # Identify invalid page counts
- invalid_pages <- cleaned_books$pages <= 0
- #for counting the total number of invalid pages instead of just one. 
+ # This sections purpose is to find pages that are incorrect, or not fully a number
+ #count it and replace it with NA
+ invalid_pages <- cleaned_books$pages <= 0| cleaned_books$pages %% 1 != 0
  invalid_page_count <-sum(invalid_pages,na.rm = TRUE)
  cat("Invalid page amount:",invalid_page_count,"\n")
- # Replace invalid page counts with missing values
- #dataframe$column[condition] <- new_value
  cleaned_books$pages[which(invalid_pages)] <- NA
