@@ -147,8 +147,8 @@ cat("Genre statistics are now saved!")
 #Now that I know how to make a csv file I want one for my new info 
 #making a new csv clean books file. 
 write.csv(
-  cleaned_books
-  "cleaned_books.csv"
+  cleaned_books,
+  "cleaned_books.csv",
   row.names= FALSE
 )
 cat("All the Books with accurate info")
