@@ -1,12 +1,15 @@
 # Overview
 
 
+BookShelf is an R program that uses a CSV file containing information about books. The program reads the data, organizes it, checks for errors, and creates a cleaner version of the original library without changing the original CSV file.
 
-{Provide a description of the software that you wrote to demonstrate the R language.}
-This is a R program that uses a csv of books, the R code then reads the data provided in the csv, and we use that data to organize, clean, and fix any errors within the R file, we can even make a companion file with data points we want in csv, we can also organize the data, and show through R the break down of categories and there information. 
+The program can identify missing information, remove duplicate books, check for invalid page counts and ratings, and calculate statistics about the collection. It can also organize books by genre, calculate average ratings, find the longest and shortest books, and determine the percentage of books that have been finished. Using R's graphing functions, I created visualizations to compare reading progress and average ratings by genre. The program also creates additional CSV files to save the cleaned data and statistics.
 
-{Describe your purpose for writing this software.}
-Honestly the purpose for designing this software was my husband, he works as a Recruiter for people in similar fields as computer science and said R looks good on resumes. I can't say I enjoyed doing R, this program was the hardest one I have had, and I think it was my ADHD I found it less exciting because it wasn't done with a fun thing in mind. I do love libraries, and library data is awesome, but the way the code was different in alot more ways than other languages I have done made it more difficult. 
+My purpose for developing this software was to expand my programming knowledge and learn a language used in data analysis. My husband works as a recruiter for people in fields related to computer science, and he mentioned that R can be a valuable skill to include on a resume.
+
+I found R to be one of the more challenging programming languages I have worked with so far. I think part of the difficulty was that I wasn't as excited about the language itself, and my ADHD made it harder to stay interested. I do love books and libraries, so creating a program that worked with library information helped make the project more meaningful to me.
+
+R's syntax was different from the other languages I have been learning, especially when working with data frames, functions, and selecting information using brackets. Even though I didn't enjoy every part of the process, I learned how useful R can be for cleaning, analyzing, and visualizing information.
 
 {Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
 
