@@ -122,3 +122,16 @@ barplot(
   ylab= "Number of books"
 )
 dev.off()
+
+#I want to see a graph comparing genre ratings. 
+png("genre_ratings.png" width=1000,height=650)
+barplot(
+  height =average_genre_rating$rating,
+  names.arg =average_genre_rating$genre,
+  col="steelblue",
+  main="Average Book Rating by Genre",
+  ylab="Average Rating",
+  ylim =c(0,5)
+  las =2
+)
+dev.off()
