@@ -73,7 +73,7 @@ cleaned_books$author_key <- tolower(cleaned_books$author)
  total_pages <-sum(cleaned_books$pages, na.rm=TRUE)
  finished_books <- sum(cleaned_books$finished ==TRUE,na.rm =TRUE)
  unfinished_books <-sum(cleaned_books$finished == FALSE,na.rm =TRUE)
- completion_percentage <-(finished_books/total_books)*100
+ 
 
 #Now I want to order them in order of genre rating
 average_genre_rating <- aggregate(
