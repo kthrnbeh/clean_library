@@ -98,4 +98,16 @@ completion_percentage <- if (known_status > 0) {
 
 #Wondering what my longest and shortest books are 
 longest_pages <-max(cleaned_books$pages,na.rm=TRUE)
-shortest_pages <-min(cleaned_books$pages,na.rm=True)
+shortest_pages <-min(cleaned_books$pages,na.rm=TRUE)
+longest_book<-cleaned_books [
+  !is.na(cleaned_books$pages) &
+  cleaned_books$pages ==longest_pages,
+]
+shortest_book<-cleaned_books [
+  !is.na(cleaned_books$pages) &
+  cleaned_books$pages == shortest_pages_pages,
+]
+cat("Shortest Book: \n")
+print(shortest_book[c("title", "pages")])
+cat("Longest Book : \n")
+print(shortest_book[c("title", "pages")])
