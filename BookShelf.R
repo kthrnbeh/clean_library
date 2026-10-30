@@ -56,7 +56,7 @@ cleaned_books$author_key <- tolower(cleaned_books$author)
  #now were replacing the invalid ratings with NA
  cleaned_books$rating[which(invalid_ratings)] <- NA
 
- #We made two columns taht helped detect duplicates regardless of 
+ #We made two columns that helped detect duplicates regardless of 
  #if they were captilized these will remove that by using Null
  cleaned_books$title_key <-NULL
  cleaned_books$author_key <-NULL 
@@ -65,7 +65,8 @@ cleaned_books$author_key <- tolower(cleaned_books$author)
 
 
  print(cleaned_books)
- #The statistical report to tell us useful collection info.
+ # The finished book gives a true statement and not finished is false, I want to see how many are finished 
+ #and the total pages
  cat('\n-- BookShelf Library Report---\n')
  total_books <- nrow(cleaned_books)
  average_rating <-mean(cleaned_books$rating,na.rm = TRUE)
@@ -73,3 +74,16 @@ cleaned_books$author_key <- tolower(cleaned_books$author)
  finished_books <- sum(cleaned_books$finished ==TRUE,na.rm =TRUE)
  unfinished_books <-sum(cleaned_books$finished == FALSE,na.rm =TRUE)
  completion_percentage <-(finished_books/total_books)*100
+
+#Now I want to order them in order of genre rating
+average_genre_rating <-aggregate(
+  rating ~ genre,
+  data=cleaned_books,
+  fun = mean,
+  na.rm=TRUE
+)
+average_genre_rating <- average_genre_rating [
+  order(-average_genre_ratings$rating),
+]
+cat("Average rating by genre:\n")
+print(average_genre_rating)
