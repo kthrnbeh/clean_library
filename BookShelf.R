@@ -135,3 +135,11 @@ barplot(
   las =2
 )
 dev.off()
+
+#A Second CSV file to keep my ratings in
+write.csv(
+  average_genre_rating,
+  "genre_statistics.csv",
+  row.names= FALSE
+)
+cat("Genre statistics are now saved!")
