@@ -1,7 +1,7 @@
 # Overview
 
 
-BookShelf is an R program that uses a CSV file containing information about books. The program reads the data, organizes it, checks for errors, and creates a cleaner version of the original library without changing the original CSV file.
+Clean Library is an R program that uses a CSV file containing information about books. The program reads the data, organizes it, checks for errors, and creates a cleaner version of the original library without changing the original CSV file.
 
 The program can identify missing information, remove duplicate books, check for invalid page counts and ratings, and calculate statistics about the collection. It can also organize books by genre, calculate average ratings, find the longest and shortest books, and determine the percentage of books that have been finished. Using R's graphing functions, I created visualizations to compare reading progress and average ratings by genre. The program also creates additional CSV files to save the cleaned data and statistics.
 
