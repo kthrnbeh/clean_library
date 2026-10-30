@@ -1,0 +1,36 @@
+"title","author","genre","pages","rating","finished"
+"A Wrinkle in Time","Madeleine L'Engle","Fantasy",256,4.5,TRUE
+"Harry Potter","J.K. Rowling","Fantasy",309,5,TRUE
+"The Hobbit",NA,"Fantasy",310,4.8,FALSE
+"Pride and Prejudice","Jane Austen","Romance",432,4.6,TRUE
+"The Hunger Games","Suzanne Collins","Dystopian",374,4.7,FALSE
+"The Fellowship of the Ring","J.R.R. Tolkien","Fantasy",423,4.9,TRUE
+"The Two Towers","J.R.R. Tolkien","Fantasy",352,4.7,FALSE
+"The Return of the King","J.R.R. Tolkien","Fantasy",416,4.8,FALSE
+"To Kill a Mockingbird","Harper Lee","Classic",281,4.8,TRUE
+"1984","George Orwell","Dystopian",328,4.5,TRUE
+"Animal Farm","George Orwell","Classic",112,4.2,TRUE
+"The Great Gatsby","F. Scott Fitzgerald","Classic",180,4.1,FALSE
+"Jane Eyre","Charlotte Brontë","Romance",532,4.6,TRUE
+"Little Women","Louisa May Alcott","Classic",449,4.7,TRUE
+"The Giver","Lois Lowry","Dystopian",240,4.4,TRUE
+"Divergent","Veronica Roth","Dystopian",487,4.3,FALSE
+"Catching Fire","Suzanne Collins","Dystopian",391,4.8,TRUE
+"Mockingjay","Suzanne Collins","Dystopian",390,4.2,FALSE
+"The Lightning Thief","Rick Riordan","Fantasy",377,4.7,TRUE
+"The Sea of Monsters","Rick Riordan","Fantasy",279,4.4,FALSE
+"The Lion the Witch and the Wardrobe","C.S. Lewis","Fantasy",208,4.6,TRUE
+"Prince Caspian","C.S. Lewis","Fantasy",240,4.3,FALSE
+"The Secret Garden","Frances Hodgson Burnett","Classic",331,4.5,TRUE
+"Anne of Green Gables","L.M. Montgomery","Classic",320,4.8,TRUE
+"The Book Thief","Markus Zusak","Historical Fiction",552,4.8,FALSE
+"The Nightingale","Kristin Hannah","Historical Fiction",440,4.7,TRUE
+"The Fault in Our Stars","John Green","Romance",313,4.4,FALSE
+"The Maze Runner","James Dashner","Dystopian",375,4.2,TRUE
+"The Martian","Andy Weir","Science Fiction",NA,4.6,TRUE
+"Project Hail Mary","Andy Weir","Science Fiction",496,4.9,FALSE
+"Dune","Frank Herbert","Science Fiction",412,4.5,FALSE
+"Enders Game","Orson Scott Card","Science Fiction",324,4.6,TRUE
+"The Alchemist","Paulo Coelho","Fiction",208,4,TRUE
+"The Outsiders","S.E. Hinton","Classic",192,4.5,FALSE
+"Wonder","R.J. Palacio","Fiction",315,4.7,TRUE
