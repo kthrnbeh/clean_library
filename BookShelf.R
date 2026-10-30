@@ -111,3 +111,14 @@ cat("Shortest Book: \n")
 print(shortest_book[c("title", "pages")])
 cat("Longest Book : \n")
 print(longest_book[c("title", "pages")])
+#were making a bar graph ,which is crazy in code
+reading_counts <- c(finished_books, unfinished_books)
+png("reading_progress.png", width=900,height=600)
+barplot(
+  reading_counts,
+  names.arg=c("Finished", "Unfinished"),
+  col=c("darkgreen","steelblue"),
+  main="My Reading Progress",
+  ylab= "Number of books"
+)
+dev.off()
