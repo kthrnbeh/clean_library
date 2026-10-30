@@ -124,7 +124,7 @@ barplot(
 dev.off()
 
 #I want to see a graph comparing genre ratings. 
-png("genre_ratings.png", width=1000,height=650)
+png("genre_ratings.png", width=930,height=600)
 barplot(
   height =average_genre_rating$rating,
   names.arg =average_genre_rating$genre,
