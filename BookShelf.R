@@ -79,11 +79,11 @@ cleaned_books$author_key <- tolower(cleaned_books$author)
 average_genre_rating <-aggregate(
   rating ~ genre,
   data=cleaned_books,
-  fun = mean,
+  Fun = mean,
   na.rm=TRUE
 )
 average_genre_rating <- average_genre_rating [
-  order(-average_genre_ratings$rating),
+  order(-average_genre_rating$rating),
 ]
 cat("Average rating by genre:\n")
 print(average_genre_rating)
