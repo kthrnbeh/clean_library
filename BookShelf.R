@@ -89,7 +89,7 @@ cat("Average rating by genre:\n")
 print(average_genre_rating)
 #I want to know what percentage of books I finished.
  
-completion_percentage <-function(finished,unfinished){
+calculate_complete <-function(finished,unfinished){
   known_status <- finished + unfinished
   if (known_status >0){
     return(round((finished / known_status) * 100, 1))
@@ -98,9 +98,10 @@ completion_percentage <-function(finished,unfinished){
   }
 }
 completion_percentage <- calculate_complete(
-  finished_books,unfinished_books
+  finished_books,
+  unfinished_books
 )
-cat("Percent of book completed:", completion_percentage(),"%\n")
+cat("Percent of books completed:", completion_percentage, "%\n")
 
 
 #Wondering what my longest and shortest books are 
